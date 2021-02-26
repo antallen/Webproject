@@ -1,0 +1,15 @@
+1. Reference Web Sites
+
+https://webprogram.onlinedoc.tw/
+https://php.onlinedoc.tw/
+https://javascripts.onlinedoc.tw/
+https://github.com
+https://github.com/antallen/WebAppProject
+https://github.com/antallen/PHPClass2
+http://192.168.133.141/VSCode/
+
+2. 2/26 process
+a. VSCode install
+b. Github register and use 
+
+
