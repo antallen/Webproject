@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./answer.php" method="POST">
+        <fieldset>
+            <legend>Personalia</legend>
+            <label for="name" id="name">姓名:</label>
+            <input type="text" name="name" id="name"><br>
+            <label for="email" id="email">E-mail</label>
+            <input type="email" name="email" id="email"><br>
+            <label for="cars">車輛品牌:</label>
+            <select name="cars" id="cars">
+                <option value="BMW">BMW</option>
+                <option value="Benz">Benz</option>
+                <option value="VW">VW</option>
+                <option value="Volov">Volov</option>
+                <option value="Saab">Saab</option>
+            </select>
+        </fieldset>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>
