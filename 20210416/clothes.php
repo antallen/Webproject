@@ -1,10 +1,11 @@
 <?php
 include "doWash.php";
+include "Mark.php";
 
 abstract class Clothes implements doWash{
     private $name;
     private $prize;
-
+    
     public function __construct($outsidename, $outsidePrize){
         $this->name = $outsidename;
         $this->prize = $outsidePrize;

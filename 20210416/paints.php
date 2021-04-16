@@ -1,9 +1,10 @@
 <?php
 include "clothes.php";
 
-class Paint extends Clothes {
+class Paint extends Clothes{
     private $length;
     private $waist;
+    private $mark;
 
     public function __construct($outsideName,$outsidePrize,$outsideLength,$outsideWaist){
         parent::__construct($outsideName,$outsidePrize);
@@ -19,6 +20,14 @@ class Paint extends Clothes {
 
     public function setPrize($outsidePrize){
         $this->prize = $outsidePrize;
+    }
+
+    public function setMark(Mark $mark){
+            $this->mark = $mark;
+    }      
+
+    public function getMark(): Mark{
+        return $this->mark;
     }
 
     public function getName(){
