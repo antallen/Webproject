@@ -1,6 +1,5 @@
 <?php
 include "doWash.php";
-include "Mark.php";
 
 abstract class Clothes implements doWash{
     private $name;
