@@ -26,7 +26,7 @@
                foreach ($values as $vale){
                  printf("<td>%s</td>",$value);
                }
-               printf("<tr>");
+               printf("</tr>");
             }
         ?>
         </tr>
