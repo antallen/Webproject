@@ -22,7 +22,8 @@
             $runSQL = $db->prepare("SELECT * FROM connects;");
             $runSQL->execute();
             foreach ($runSQL as $value){
-                printf("<td>%f</td>",$value);
+                var_dump($value);
+                //printf("<td>%s</td>",$value);
             }
         ?>
         </tr>
