@@ -20,7 +20,7 @@
             require_once "connections.php";
 
             $runSQL = $db->prepare("SELECT * FROM connects;");
-
+            $runSQL->execute();
             foreach ($runSQL as $value){
                 printf("<td>%f</td>",$value);
             }
