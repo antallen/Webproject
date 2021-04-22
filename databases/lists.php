@@ -14,16 +14,19 @@
             <th>Email</th>
             <th>Phone</th>
         </tr>
-        <tr>
+       
         <?php
 
             require_once "connections.php";
 
             $runSQL = $db->prepare("SELECT * FROM connects;");
             $runSQL->execute();
-            foreach ($runSQL as $value){
-                var_dump($value);
-                //printf("<td>%s</td>",$value);
+            foreach ($runSQL as $values){
+                printf("<tr>");
+               foreach ($values as $vale){
+                 printf("<td>%s</td>",$value);
+               }
+               printf("<tr>");
             }
         ?>
         </tr>
