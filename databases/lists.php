@@ -7,29 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <table border="1">
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-        </tr>
-       
+        </tr>    
         <?php
 
             require_once "connections.php";
 
             $runSQL = $db->prepare("SELECT * FROM connects;");
             $runSQL->execute();
-            foreach ($runSQL as $values){
-                printf("<tr>");
-               foreach ($values as $vale){
-                 printf("<td>%s</td>",$value);
-               }
-               printf("</tr>");
+            printf("<tr>");
+            while ($row = $runSQL->fetch()){
+                printf("<td>%d</td>",$row[0]);  
+                printf("<td>%s</td>",$row[1]);
+                printf("<td>%s</td>",$row[2]);
+                printf("<td>%s</td>",$row[3]);
             }
+            printf("</tr>");
         ?>
-        </tr>
+        
     </table>
 
 </body>
