@@ -1,11 +1,16 @@
-# Webproject
-樹德科大Web App課程練習專用
-
-# My Project
-+ 我的汽車保養記錄站台
+# Webproject Name
++ 汽車保養記錄站台
 
 ## Founction of My Project
-+ 記錄汽車保養資料
++ 會員登入
+  + 基本資料維護
+  + 會員登出
++ 汽車保養資料
+  + 汽車牌號資料維護
+  + 保養記錄維護
++ 汽車零件資料
+
 
 ## Record of Designed
-+ 2021/04/09 Idea Create
++ 2021/05/14 Ideal Create
++ 2021/05/14 建立資料庫
