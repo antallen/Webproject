@@ -1,5 +1,7 @@
 <?php
 
+use IndexController;
+
 class Core {
 
     public function run(){
@@ -27,12 +29,13 @@ class Core {
         return $value;
     }
     function removeMagicQuotes(){
-        if ( get_magic_quotes_gpc()) {
-            $_GET = stripSlashesDeep($_GET );
-            $_POST = stripSlashesDeep($_POST );
-            $_COOKIE = stripSlashesDeep($_COOKIE);
-            $_SESSION = stripSlashesDeep($_SESSION);
-           }
+        
+        //if ( get_magic_quotes_gpc()) {
+        //    $_GET = stripSlashesDeep($_GET );
+        //    $_POST = stripSlashesDeep($_POST );
+       //     $_COOKIE = stripSlashesDeep($_COOKIE);
+        //    $_SESSION = stripSlashesDeep($_SESSION);
+        //   }
     }
 
     function unregisterGlobals(){
