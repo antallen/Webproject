@@ -7,16 +7,11 @@ class Config{
         while ((! feof($file)) && ($line = fgets($file))){
             $line = trim($line);
             $info = explode('=',$line);
-            print $info[0];
+            if (empty($info[0])){
+                continue;
+            }
+            define($info[0],$info[1]);
         }
     }
 
 }
-//print ("Hello");
-
-/** 資料庫連結變數設定 
-define('DB_NAME', 'contact');
-define('DB_USER', 'hello');
-define('DB_PASSWORD', 'hello$1213');
-define('DB_HOST', 'localhost');
-**/
