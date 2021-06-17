@@ -2,20 +2,37 @@
 
 namespace kernel;
 use config\Config;
+use config\Router;
 
 require_once(APP_PATH.'config/config.php');
+require_once(APP_PATH.'config/router.php');
+
 class Kernel {
 
     protected $_config;
+    protected $_router;
 
     public function __construct(){
-        $this->_config = new Config();
+        $this->_config = new Config(); 
+        $this->_router = new Router($_SERVER);
     }
 
     public function run(){
         spl_autoload_register(array($this, 'loadClass'));
         $this->unregisterGlobals();
         $this->_config->show();
+
+        //由路由設定，取出需要使用的控制器
+        include ('Router.php');
+        $controllerName = $this->_router->run();
+        $controller = 'App\\Controllers\\'.$controllerName;
+        //找出控制器後，程式交給控制器執行
+        if (!class_exists($controller)){
+            exit($controller.'控制器不存在');
+        } else {
+            (new $controller())->run();
+           // \call_user_func_array($dispatch);
+        }
     }
 
     //自動加載類別
