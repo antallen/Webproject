@@ -11,6 +11,7 @@ class Kernel {
 
     protected $_config;
     protected $_router;
+    protected $uri = array();
 
     public function __construct(){
         $this->_config = new Config(); 
@@ -24,8 +25,8 @@ class Kernel {
 
         //由路由設定，取出需要使用的控制器
         include ('Router.php');
-        $controllerName = $this->_router->run();
-        $controller = 'App\\Controllers\\'.$controllerName;
+        $uri = $this->_router->run();
+        $controller = 'App\\Controllers\\'.$uri[1];
         //找出控制器後，程式交給控制器執行
         if (!class_exists($controller)){
             exit($controller.'控制器不存在');

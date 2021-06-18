@@ -1,18 +1,11 @@
 <?php
 
-class Model{
-    protected $_model;
-    protected $_table;
+namespace kernel;
 
-    //initialization
-    public function __construct(){
-        $this->_model = get_class($this);
-        $this->_model = rtrim($this->_model, 'Model');
-        $this->_table = strtolower($this->_model);
-    }
-
+abstract class Model{
+    
+    //construct
+    abstract public function __construct();
     //deconstruct
-    function __destruct(){
-
-    }
+    abstract public function __destruct();
 }
