@@ -15,11 +15,14 @@ class IndexController extends Controller {
     }
 
     public function getUri(){
-        return parent::getUri();
+        $this->paras = parent::getUri();
+        return $this->paras;
     }
     
     public function run(){
         var_dump($this->getUri());
+        //$this->paras = $this->getUri();
+        //var_dump($this->paras);
         $username = new indexModel();
         $result = $username->printName();
         $view = new indexView();
