@@ -31,7 +31,7 @@ class Kernel {
         if (!class_exists($controller)){
             exit($controller.'控制器不存在');
         } else {
-            (new $controller())->run();
+            (new $controller($uri[0]))->run();
            // \call_user_func_array($dispatch);
         }
     }

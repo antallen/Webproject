@@ -16,10 +16,15 @@ class Router {
     }
     public function run(){
         //分析參數
+        $uri = array();
         $uri = explode('?',$this->request);
-        //var_dump($uri);
+        if (!isset($uri[1])){
+            $uri[1] = "";
+        }
         if ($this->hasRoute($uri[0])){
-            return array($uri[0],(self::$routes['/'.$uri[0]]));
+            return array($uri[1],(self::$routes['/'.$uri[0]]));
+        } else {
+            print "error";
         }
     }
 }
