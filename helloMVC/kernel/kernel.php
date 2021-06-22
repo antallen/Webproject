@@ -6,6 +6,7 @@ use config\Router;
 
 require_once(APP_PATH.'config/config.php');
 require_once(APP_PATH.'config/router.php');
+require_once(APP_PATH.'vendor/autoload.php');
 
 class Kernel {
 

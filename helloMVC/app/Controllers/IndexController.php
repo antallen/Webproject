@@ -25,7 +25,7 @@ class IndexController extends Controller {
         //var_dump($this->paras);
         $username = new indexModel();
         $result = $username->printName();
-        $view = new indexView();
+        $view = new indexView("/");
         $view->show($result);
     }
 }
