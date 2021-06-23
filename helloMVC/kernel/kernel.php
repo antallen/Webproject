@@ -26,14 +26,23 @@ class Kernel {
 
         //由路由設定，取出需要使用的控制器
         include ('Router.php');
-        $uri = $this->_router->run();
-        $controller = 'App\\Controllers\\'.$uri[1];
-        //找出控制器後，程式交給控制器執行
-        if (!class_exists($controller)){
-            exit($controller.'控制器不存在');
+        //將 css / javascripts / images 檔案歸類
+        if (preg_match('/.js/i',$this->_router->request)){
+            include ('../statics/js/'.$this->_router->request);
+        }elseif (preg_match('/.css/i',$this->_router->request)){
+            include ('../statics/css/'.$this->_router->request);
+        } elseif (preg_match('/./i',$this->_router->request)){
+            include ('../statics/images/'.$this->_router->request);
         } else {
-            (new $controller($uri[0]))->run();
-           // \call_user_func_array($dispatch);
+            $uri = $this->_router->run();
+            $controller = 'App\\Controllers\\'.$uri[1];
+            //找出控制器後，程式交給控制器執行
+            if (!class_exists($controller)){
+                exit($controller.'控制器不存在');
+            } else {
+                (new $controller($uri[0]))->run();
+            // \call_user_func_array($dispatch);
+            }
         }
     }
 

@@ -20,7 +20,7 @@ class IndexController extends Controller {
     }
     
     public function run(){
-        var_dump($this->getUri());
+        //var_dump($this->getUri());
         //$this->paras = $this->getUri();
         //var_dump($this->paras);
         $username = new indexModel();
