@@ -1,16 +1,11 @@
 <?php
-
 namespace App\Controllers;
-
 use kernel\Controller;
-use App\Models\indexModel;
-use App\Views\indexView;
+//use App\Models\indexModel;
+use App\Views\loginView;
 use App\DBs\DB;
-
-class LoginController extends Controller {
-   
+class LoginController extends Controller { 
     protected $paras;
-
     public function __construct($parameter){
        parent::__construct($parameter);
     }
@@ -22,6 +17,8 @@ class LoginController extends Controller {
     
     public function run(){
         $db = new DB("students");
-        var_dump($db->fetchAll());
+        //var_dump($db->fetchAll());
+        $view = new loginView("/login");
+        $view->show($db->fetchAll());
     }
 }

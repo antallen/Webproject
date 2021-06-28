@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":256:{a:2:{s:7:"defects";a:3:{s:17:"DBTest::testWhere";i:4;s:22:"Test\DBTest::testWhere";i:4;s:25:"Test\DBTest::testfetchAll";i:4;}s:5:"times";a:3:{s:17:"DBTest::testWhere";d:0.006;s:22:"Test\DBTest::testWhere";d:0.006;s:25:"Test\DBTest::testfetchAll";d:0.006;}}}

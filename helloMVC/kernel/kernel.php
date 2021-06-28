@@ -31,7 +31,7 @@ class Kernel {
             include ('../statics/js/'.$this->_router->request);
         }elseif (preg_match('/.css/i',$this->_router->request)){
             include ('../statics/css/'.$this->_router->request);
-        } elseif (preg_match('/./i',$this->_router->request)){
+        } elseif (preg_match('/\./i',$this->_router->request)){
             include ('../statics/images/'.$this->_router->request);
         } else {
             $uri = $this->_router->run();
